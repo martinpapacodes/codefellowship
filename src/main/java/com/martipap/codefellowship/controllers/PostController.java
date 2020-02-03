@@ -25,7 +25,7 @@ public class PostController {
     public RedirectView createNewPost(long id, String body) {
 
         Date time = Calendar.getInstance().getTime();
-        DateFormat timeFormat = new SimpleDateFormat("dd-M-yyyy hh:mm:ss");
+        DateFormat timeFormat = new SimpleDateFormat("yyyy-mm-dd hh:mm:ss");
         String timeStamp = timeFormat.format(time);
         ApplicationUser theUser = applicationUserRepository.findById(id).get();
         Post newPost = new Post(theUser, body, timeStamp);

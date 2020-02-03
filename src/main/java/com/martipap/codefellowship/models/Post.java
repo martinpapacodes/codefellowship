@@ -21,8 +21,8 @@ public class Post {
 
     }
 
-    public Post(ApplicationUser applicationUser, String body, String createdAt) {
-        this.applicationUser = applicationUser;
+    public Post(ApplicationUser application_user, String body, String createdAt) {
+        this.applicationUser = application_user;
         this.body = body;
         this.createdAt = createdAt;
     }
