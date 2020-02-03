@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>[[${principal}]]'s Profile</title>
+</head>
+<body>
+<header th:insert="~{fragments/header :: header}"></header>
+
+<h1>Hello, [[${theUser.firstName}]]!</h1>
+<h2>Welcome to your profile</h2>
+<img src="/images/profilePhoto.png" alt="Default profile photo">
+
+<ul>
+    <li>First Name: [[${firstName}]]</li>
+    <li>Last Name: [[${lastName}]]</li>
+    <li>Birthday: [[${dateOfBirth}]]</li>
+    <li>Bio: [[${bio}]]</li>
+</ul>
+
+<h3>Create Post</h3>
+<form action="/post" method="POST">
+    <textarea name="body" id="" cols="30" rows="10">Write here...</textarea>
+<!--    <input type="hidden" name="id" th:value="${id}">-->
+    <input type="submit">
+</form>
+
+<ul th:each="post : ${theUser.posts}">
+
+    <li>Author: [[${firstName}]]</li>
+    <li>Body: [[${post.body}]]</li>
+    <li>Created At: [[${post.createdAt}]]</li>
+
+
+</ul>
+
+</body>
+</html>

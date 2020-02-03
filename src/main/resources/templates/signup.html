@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Sign Up</title>
+</head>
+<body>
+<header th:insert="~{fragments/header :: header}"></header>
+
+ <h2>Create a profile: </h2>
+
+<form action="/signup" method="POST">
+    Username: <input type="text" name="username">
+    Password:  <input type="password" name="password">
+    First name:  <input type="text" name="firstName">
+    Last name:  <input type="text" name="lastName">
+    Date of birth:  <input type="date" name="dateOfBirth">
+    Bio: <textarea name="" id="" cols="30" rows="10"></textarea>
+    <input type="submit">
+
+</form>
+</body>
+</html>
