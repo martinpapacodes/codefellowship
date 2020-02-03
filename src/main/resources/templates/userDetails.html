@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>User Details</title>
+</head>
+<body>
+
+<header th:insert="~{fragments/header :: header}"></header>
+
+<h1>Hello, [[${usernameWeAreVisiting}]]!</h1>
+<h2>Welcome to your profile</h2>
+<img src="/images/profilePhoto.png" alt="Default Profile Photo">
+<ul>
+    <li>First Name: [[${firstName}]]</li>
+    <li>Last Name: [[${lastName}]]</li>
+    <li>Birthday: [[${dateOfBirth}]]</li>
+    <li>Bio: [[${bio}]]</li>
+</ul>
+
+<form action="/users/follow" method="POST">
+    <input type="hidden" name="id" th:value="${theUser.id}">
+    <input type="submit" value="Follow Me">
+
+</form>
+
+
+</body>
+</html>

@@ -3,23 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="./static/styles.css">
+    <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
-    <h1>Hello, welcome to codefellowship page</h1>
 
-<h2>make new users here</h2>
-    <form action="/signup" method="POST">
-      Username: <input type="userName" name="userName">
-      Password:  <input type="passWord" name="passWord">
-      First name:  <input type="firstName" name="firstName">
-      Last name:  <input type="lastName" name="lastName">
-      Date of birth:  <input type="dateOfBirth" name="dateOfBirth">
-      Bio:   <input type="bio" name="bio">
+<header th:insert="~{fragments/header :: header}"></header>
 
-        <input type="submit">
+<p>Codefellowship allows people learning to code to connect with each other and support each other on their coding journeys. </p>
 
-    </form>
 
 </body>
 </html>

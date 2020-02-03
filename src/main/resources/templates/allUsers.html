@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>All Users</title>
+</head>
+<body>
+<header th:insert="~{fragments/header :: header}"></header>
+
+<ul th:each="user : ${allUsers}">
+    <li><img src="/images/profilePhoto.png" alt="Default Profile Photo"></li>
+    <li>First Name: [[${user.firstName}]]</li>
+    <li>Last Name: [[${user.lastName}]]</li>
+    <li>Birthday: [[${user.dateOfBirth}]]</li>
+    <li>Bio: [[${user.bio}]]</li>
+</ul>
+</body>
+</html>
