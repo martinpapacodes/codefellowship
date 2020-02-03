@@ -2,16 +2,18 @@ package com.martipap.codefellowship.models;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.web.servlet.tags.EditorAwareTag;
 
 import javax.persistence.*;
 import java.util.Collection;
-import java.util.Date;
 import java.util.List;
 import java.util.Set;
 
 @Entity
 public class ApplicationUser implements UserDetails {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    public long id;
 
     @ManyToMany(cascade = CascadeType.REMOVE)
     @JoinTable(
@@ -31,9 +33,7 @@ public class ApplicationUser implements UserDetails {
     public List<Post> getPosts() {
         return this.posts;
     }
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    long id;
+
     public String username;
     public String password;
     public String firstName;

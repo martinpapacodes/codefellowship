@@ -7,8 +7,6 @@ public class Post {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
-
     long id;
 
     @ManyToOne
@@ -21,8 +19,8 @@ public class Post {
 
     }
 
-    public Post(ApplicationUser application_user, String body, String createdAt) {
-        this.applicationUser = application_user;
+    public Post(ApplicationUser applicationUser, String body, String createdAt) {
+        this.applicationUser = applicationUser;
         this.body = body;
         this.createdAt = createdAt;
     }

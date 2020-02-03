@@ -27,6 +27,7 @@ public class PostController {
         Date time = Calendar.getInstance().getTime();
         DateFormat timeFormat = new SimpleDateFormat("yyyy-mm-dd hh:mm:ss");
         String timeStamp = timeFormat.format(time);
+        System.out.println("fafafdafadfafdafffffffffffffffff = " + timeStamp);
         ApplicationUser theUser = applicationUserRepository.findById(id).get();
         Post newPost = new Post(theUser, body, timeStamp);
         postRepository.save(newPost);
